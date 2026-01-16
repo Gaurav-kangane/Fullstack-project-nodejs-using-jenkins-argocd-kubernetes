@@ -1,0 +1,41 @@
+###----- Trivy-------- ###
+
+Image scanner tool
+
+Trivy (tri pronounced like trigger, vy pronounced like envy) is a comprehensive security scanner. It is reliable, fast, extremely easy to use, and it works wherever you need it.
+
+Trivy has different scanners that look for different security issues, and different targets where it can find those issues.
+
+About Trivy
+Trivy (pronunciation) is a comprehensive and versatile security scanner. Trivy has scanners that look for security issues, and targets where it can find those issues.
+
+Targets (what Trivy can scan):
+
+Container Image
+Filesystem
+Git Repository (remote)
+Virtual Machine Image
+Kubernetes
+AWS
+Scanners (what Trivy can find there):
+
+OS packages and software dependencies in use (SBOM)
+Known vulnerabilities (CVEs)
+IaC issues and misconfigurations
+Sensitive information and secrets
+Software licenses
+
+#----------------------Trivy install---------------#
+sudo rpm -ivh https://github.com/aquasecurity/trivy/releases/download/v0.48.3/trivy_0.48.3_Linux-64bit.rpm
+
+trivy image <image name>
+
+trivy image nginx
+
+trivy image --format json -o trivy_report.json nginx:latest
+
+jq . trivy_report.json
+
+
+
+
