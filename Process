@@ -34,4 +34,15 @@
 
 13. Before build frontend pipeline install argocd in server to deploy cluster for install refer this link --> https://medium.com/p/f4a9a8488cf9
 
-14. 
+14. kubectl edit svc argocd-server -n argocd  #enable Load balancer 
+
+15. kubectl get secret argocd-initial-admin-secret -n argocd -o yaml --> copy the password and decode --> echo "secret value" | base64 --decode
+
+16. kubectl get svc -n argocd --> copy the loadbalancer and access the argocd
+
+17. copy the database host and go to this site https://www.base64decode.org/ and select encode on the top and paste database host endpoint and encode it and paste on below file
+    Go to repo in git --> kubernetes-files --> secret.yaml --> update db host, username and password --> update encoded value
+
+18. click --> new app --> Sync Policy Automatic --> give repo url https://github.com/Gaurav-kangane/Fullstack-project-nodejs.git --> Revision main --> path kubernetes-files
+    select cluster url --> Namespace default --> create
+
