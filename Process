@@ -25,3 +25,13 @@
 8. Go to your Git repo and go settings, go to Developer setting --> personal access tokens --> Tokens (classes) --> Generate new token (classic)  --> give any name all give all persmission --> Generate Token
 
 9. Copy the token go to jenkins --> setting --> credentials --> System --> Global credentials (unrestricted) --> adding some --> secret text --> paste the token in secret --> ID = my-git-pattoken --> descr = tokencred
+
+10. Go AWS console search for ECR and create repository backend and frontend.
+
+11. Go ec2 install docker --> yum install docker -y --> systemctl start docker --> run this command --> sudo chmod 666 /var/run/docker.sock
+
+12. In jenkins create backend pipeline add backend-jenkins code and install stageview plugin then build the backend pipeline.
+
+13. Before build frontend pipeline install argocd in server to deploy cluster for install refer this link --> https://medium.com/p/f4a9a8488cf9
+
+14. 
