@@ -1,3 +1,27 @@
+# Refer video 2026-01-09 Day-127 
+
 1. Create database (RDS) and create one server and install git and clone repo https://github.com/Gaurav-kangane/Fullstack-project-nodejs.git
 
-2.
+2. Go to EKS create cluster after that go to compute option and add nodegroup and create nodegroup.
+
+3. Go to Ec2 Attach the IAM role with admin access and install kubectl, aws configure and  aws eks update-kubeconfig --region us-east-1 --name Gaurav
+
+4. yum install mariadb105-server -y and then go to git repo  --> cd backend
+
+5. Run this command -->   ## h= db host u= username and p = password
+
+6. Install jenkins 
+    sudo yum install java-17-amazon-corretto.x86_64
+    
+    #------------jenkins install-------------
+    sudo wget -O /etc/yum.repos.d/jenkins.repo https://pkg.jenkins.io/redhat-stable/jenkins.repo
+    sudo rpm --import https://pkg.jenkins.io/redhat-stable/jenkins.io-2023.key
+    sudo yum install jenkins -y
+    sudo systemctl enable jenkins
+    sudo systemctl start jenkins
+
+7. Take public ip of server with port 8080 e.g ip:8080 then run -->  cat /var/lib/jenkins/secrets/initialAdminPassword enter the password create user and login
+
+8. Go to your Git repo and go settings, go to Developer setting --> personal access tokens --> Tokens (classes) --> Generate new token (classic)  --> give any name all give all persmission --> Generate Token
+
+9. Copy the token go to jenkins --> setting --> credentials --> System --> Global credentials (unrestricted) --> adding some --> secret text --> paste the token in secret --> ID = my-git-pattoken --> descr = tokencred
