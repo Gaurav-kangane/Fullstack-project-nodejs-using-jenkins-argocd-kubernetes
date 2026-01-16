@@ -46,3 +46,8 @@
 18. click --> new app --> Sync Policy Automatic --> give repo url https://github.com/Gaurav-kangane/Fullstack-project-nodejs.git --> Revision main --> path kubernetes-files
     select cluster url --> Namespace default --> create
 
+19. In argocd click on backend svc copy hostname and go to git repo --> client --> src --> pages --> config.js edit the file --> const API_BASE_URL = add the lb url
+
+20. Go to jenkins and create frontend pipeline add the frontend-jenkins code and build the pipeline check pipeline is successfully run.
+
+21. Go to argocd and sync the application and go to frontend svc and take loadbalancer url check application working or not.
